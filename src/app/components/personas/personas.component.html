@@ -1,0 +1,35 @@
+<div class="card">
+    <h1>persona Listado </h1>
+    <div>
+      <button [routerLink]="['/agregar']" >Nuevas personas</button>
+    </div>
+</div>
+
+<table>
+  <thead>
+    <th>Id</th>
+    <th>nombre</th>
+    <th>apellido</th>
+    <th></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let  persona of listarPersonas">
+      <td>
+        <a [routerLink]="['/ver',persona.id] "> {{persona.id}}   </a>
+      </td>
+      <td>
+        <a> {{persona.nombre}}</a>
+      </td>
+      <td>
+        <a> {{persona.apellido}}</a>
+      </td>
+      <td>
+        <button [routerLink]="['/editar',persona.id]" >Editar</button>
+      </td>
+      <td>
+        <button (click)="borrarPersona(persona.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

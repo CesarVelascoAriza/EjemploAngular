@@ -1,0 +1,25 @@
+<br>
+<br>
+<br>
+<br>
+<p>{{accion}} Persona</p>
+<div>
+  <form [formGroup]="persona">
+      <div>
+        <label for="">id</label>
+        <input type="number" formControlName ='id'>
+      </div>
+      <div>
+        <label for="">nombre</label>
+        <input type="text" formControlName ='nombre'>
+      </div>
+      <div>
+        <label for="">apellido</label>
+        <input type="text" formControlName ='apellido'>
+      </div>
+      <div>
+        <button (click)="guardarPersonasFormulario()">Guardar</button>
+        <button [routerLink]="['/']" routerLinkActive="router-link-active"  >Cancelar</button>
+      </div>
+  </form>
+</div>
